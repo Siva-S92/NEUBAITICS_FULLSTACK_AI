@@ -1,10 +1,7 @@
 import React from "react";
 import { ScatterChart } from "@mui/x-charts/ScatterChart";
 
-
-export default function GridChart({total_reviews}) {
-  
-
+export default function GridChart({ total_reviews }) {
   // Filter reviews based on label
   const positives = total_reviews.filter(
     (item) => item.result.label === "POSITIVE"
@@ -36,42 +33,44 @@ export default function GridChart({total_reviews}) {
   };
 
   return (
-    <ScatterChart
-      className="mx-auto"
-      width={600}
-      height={300}
-      series={[
-        {
-          label: "POSITIVE",
-          data: formatData(positives), // Map positives data
-          color: "green",
-        },
-        {
-          label: "NEGATIVE",
-          data: formatData(negatives), // Map negatives data
-          color: "red",
-        },
-        {
-          label: "NEUTRAL",
-          data: formatData(neutrals), // Map neutrals data
-          color: "gray",
-        },
-      ]}
-      grid={{ vertical: true, horizontal: true }}
-      tooltip={({ datum }) => {
-        // Custom tooltip to display product title
-        return (
-          <div>
-            <p>Product: {datum.title}</p>
-            <p>Score: {datum.y}</p>
-            <p>Label: {datum.label}</p>
-          </div>
-        );
-      }}
-    />
+    <>
+    <h1 className="text-center text-xl">Reviews&nbsp;Chart</h1>
+      <div className="scrollable-container overflow-x-scroll scroll-auto py-16 border-y border-gray-100">
+        
+        <ScatterChart
+          className="mx-auto"
+          width={600}
+          height={300}
+          series={[
+            {
+              label: "POSITIVE",
+              data: formatData(positives), // Map positives data
+              color: "green",
+            },
+            {
+              label: "NEGATIVE",
+              data: formatData(negatives), // Map negatives data
+              color: "red",
+            },
+            {
+              label: "NEUTRAL",
+              data: formatData(neutrals), // Map neutrals data
+              color: "gray",
+            },
+          ]}
+          grid={{ vertical: true, horizontal: true }}
+          tooltip={({ datum }) => {
+            // Custom tooltip to display product title
+            return (
+              <div>
+                <p>Product: {datum.title}</p>
+                <p>Score: {datum.y}</p>
+                <p>Label: {datum.label}</p>
+              </div>
+            );
+          }}
+        />
+      </div>
+    </>
   );
 }
-
-
-
-
