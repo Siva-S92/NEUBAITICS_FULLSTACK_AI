@@ -1,7 +1,9 @@
 import React from "react";
 import { ScatterChart } from "@mui/x-charts/ScatterChart";
+import { useNavigate } from "react-router-dom";
 
 export default function GridChart({ total_reviews }) {
+  const navigate = useNavigate();
   // Filter reviews based on label
   const positives = total_reviews.filter(
     (item) => item.result.label === "POSITIVE"
@@ -34,9 +36,9 @@ export default function GridChart({ total_reviews }) {
 
   return (
     <>
-    <h1 className="text-center text-xl">Reviews&nbsp;Chart</h1>
-      <div className="scrollable-container overflow-x-scroll scroll-auto py-16 border-y border-gray-100">
-        
+      <p onClick={() => navigate("/")} className="text-center text-blue-500 underline underline-offset-2 mb-5">Go&nbsp;to&nbsp;Products</p>
+      <h1 className="text-center text-xl">Reviews&nbsp;Chart</h1>
+      <div className="scrollable-container overflow-x-scroll scroll-auto py-10 border-y border-gray-100">
         <ScatterChart
           className="mx-auto"
           width={600}
