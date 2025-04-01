@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+section {
+    @apply w-full max-w-7xl mx-auto mt-5
+}
