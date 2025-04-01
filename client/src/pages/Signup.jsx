@@ -28,7 +28,7 @@ function Signup() {
   return (
     <>
       <div className="w-screen h-screen content-center px-5 -mt-0 lg:-mt-20">
-        <h1 onClick={() => navigate("/")} className="cursor-pointer text-center text-blue-500 font-bold underline underline-offset-4 mb-10">
+        <h1 onClick={() => navigate("/")} className="cursor-pointer text-center text-blue-500 font-bold underline underline-offset-4 my-10">
           Home
         </h1>
         <form
