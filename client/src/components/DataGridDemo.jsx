@@ -21,15 +21,15 @@ export default function DataGridDemo({ total_reviews }) {
   // Define the columns with flex for auto width
   const cols = [
     { field: "id", headerName: "ID", width: 90 },
-    { field: "title", headerName: "Title", flex: 1, minWidth: 150 },
+    { field: "title", headerName: "ProductName", flex: 1, minWidth: 150 },
     { field: "category", headerName: "Category", flex: 1, minWidth: 150 },
     { field: "price", headerName: "Price", flex: 1, minWidth: 150 },
     { field: "description", headerName: "Description", flex: 1, minWidth: 350 },
     { field: "thumbnail", headerName: "Thumbnail", flex: 1, minWidth: 350 },
     { field: "username", headerName: "Username", flex: 1, minWidth: 150 },
     { field: "email", headerName: "Email", flex: 1, minWidth: 150 },
-    { field: "comment", headerName: "Comment", flex: 1, minWidth: 150 },
-    { field: "label", headerName: "Label", flex: 1, minWidth: 150 },
+    { field: "comment", headerName: "Review", flex: 1, minWidth: 200 },
+    { field: "label", headerName: "Sentiment Label", flex: 1, minWidth: 150 },
     { field: "score", headerName: "Score", type: "number", flex: 1, minWidth: 150 },
   ];
 
