@@ -8,6 +8,7 @@ import Signup from "./pages/Signup";
 import { Toaster } from "react-hot-toast";
 import Dashboard from "./pages/Dashboard";
 import MainHeader from "./components/MainHeader";
+import Footerbar from "./components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
+        <Footerbar />
       </BrowserRouter>
     </>
   );
