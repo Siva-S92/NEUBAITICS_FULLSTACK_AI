@@ -61,7 +61,7 @@ const ProductDetailCard = () => {
 
   if (!current_product) {
     return (
-      <div className="w-full h-96 flex justify-center items-center">
+      <div className="w-full min-h-screen flex justify-center items-center">
         <span className="loader"></span>
       </div>
     ); // Placeholder while the product is being fetched

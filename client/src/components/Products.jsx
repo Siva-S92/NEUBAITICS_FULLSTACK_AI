@@ -28,13 +28,11 @@ function Products() {
 
   return (
     <>
-    {
-      isLoading && (
-        <div className="w-full h-96 flex justify-center items-center">
+      {isLoading && (
+        <div className="w-full min-h-screen flex justify-center items-center">
           <span className="loader"></span>
         </div>
-      )
-    }
+      )}
       <div className="flex flex-wrap justify-center items-center gap-5">
         {products.length > 0 &&
           products.map((product) => (
